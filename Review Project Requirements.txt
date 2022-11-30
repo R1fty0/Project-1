@@ -1,0 +1,64 @@
+Requirements:
+
+		have to import libraries
+
+	General: 
+
+		Import an external library and use it somewhere in your code(ex. randomizer, math, time, etc)
+		
+		Comments
+
+		Creating, accessing and changing variables
+
+		Methods
+
+	
+	Task 1: Done
+	
+		Create a small program that takes a user’s input and allows them to choose which type of data they
+		want it turned into (ex: if input is ‘2’, it could be turned into a float ‘2.0’ or a String “2”; make sure you use casting!!
+
+	
+	Task 2: 1/4 Done
+	
+		Create a grade calculator that reports the grade score as well as a customized message for any percentage score
+		being processed (including below 0 and above 100).
+
+
+	Task 3: Done
+
+		Create a program that asks the user to choose a starting number, an ending number, and a gap (how many numbers to skip)
+		that then prints out every number between the bottom and top separated by the gap.
+        Ex: User input low: 3, high: 15, gap: 4 … output would be -> 3, 5, 7, 9, 11, 13, 15
+
+	
+	Task 4: Done
+
+		Create a guessing game that only ends when the user guesses the right number. Provide some hints to make it fair!
+
+	
+	Task 5: Done
+
+		Create a program that calculates tax on a purchase and adds it to the total cost of the item.
+		In addition, add another component to this program that allows the user to input a bank balance and item cost
+		that reports how many of that item they can afford to buy.
+
+	
+	Task 6: Not Done
+
+		Create a program that allows the user to enter as many values as they want and then calculates the lowest,
+		highest, and average value using arrays or lists.
+
+
+	Task 7: Not Done
+	
+		Create a class called ‘Person’ with the following: 
+
+			Instance variables (at the top of class) for name, age, and favorite quote 
+
+			Getters/setters for each of these variables 
+
+			A constructor that requires an initial value for all variables 
+
+		Then, create a program that allows the user to initialize and edit their own person object 
+		
