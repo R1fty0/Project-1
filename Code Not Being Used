@@ -1,0 +1,34 @@
+class GradeCalculator:  # Class containing all the variables for the Grade Calculator module
+    Grades = []
+    TotalScore = 0
+    WeightOfEachGrade = []
+    NumberOfAssignments = 0
+
+    # Dialogue = []
+
+    def GetGrades(self):
+        return self.Grades
+
+    def GetTotalScore(self):
+        return self.TotalScore
+
+    def GetWeightOfEachGrade(self):
+        return self.WeightOfEachGrade
+
+    def GetNumberOfAssignments(self):
+        return self.NumberOfAssignments
+
+    def SetGrades(self, Grade):
+        self.Grades.append(Grade)
+
+    def SetWeightOfEachGrade(self, Weight):
+        self.WeightOfEachGrade.append(Weight)
+
+    def SetNumberOfAssignments(self, Number):
+        self.NumberOfAssignments = Number
+
+    def SetTotalScore(self, TotalScore):
+        self.TotalScore = TotalScore
+
+
+

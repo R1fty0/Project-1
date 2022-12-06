@@ -3,7 +3,9 @@
 class Dialogue:
 
     MainMenu = ["Welcome to the Main Menu!:", "Press (1) to open the Data Type Converter!",
-                "Press (2) to open the Lister program!", "Press (3) to play the Guessing Game!"]
+                "Press (2) to open the Grade Calculator program!", "Press (3) to use the Lister program!",
+                "Press (4) to play the Guessing Game!", "Press (5) to  run the Financial Calculator and Manager!",
+                "Press (6) to open the Highs and Lows Calculator!", "Press (7) to open the Person editor!"]
 
     def GetMainMenuDialogue(self):  # Returns the text for the options part of the Main Menu.
         return self.MainMenu
@@ -13,8 +15,7 @@ class Dialogue:
     def GetReturnToMainMenuDialogue(self):  # Returns the text for the options part of the Return to Main Menu function.
         return self.ReturnToMainMenu
 
-    TaxCalculatorReturnToMenu = ["Press (1) to Return to the Main Menu.", "Press (2) to restart the Tax Calculator Program.",
-                                 "Press (3) to restart the Bank Account Manager."]
+    TaxCalculatorReturnToMenu = ["Press (1) to Return to the Main Menu.", "Press (2) to restart the program."]
 
     def GetTaxCalculatorReturnToMenuDialogue(self):
         return self.TaxCalculatorReturnToMenu
@@ -32,8 +33,10 @@ class Dialogue:
         return self.GuessingGameOptions
 
     OpeningProgramStatements = ["Running the Type Converter...", "Running the Grade Calculator...", "Starting the Lister Program...",
-                                "Booting up the Guessing Game...", "Running the Tax Calculator Program...",
+                                "Booting up the Guessing Game...", "Running the Financial Program now...",
                                 "Initializing the Scripts for the Highs and Lows Calculator...", "Creating the Environment for the Person Editor to run..."]
+
+    TaxCalculatorDialogue = ["Welcome to the Finance Calculator and Manager!", "Press (1) to use the Tax Calculator.", "Press (2) to use the Bank Account Manager."]
 
 
 
@@ -41,7 +44,6 @@ class Basics:  # Contains variables and other parameters used repetitively throu
     Name = "Mohit"
     NumberOfModules = 5
     Border = "_________________________________________________________________________________"
-
 
     def SetName(self, Name):
         self.Name = Name
@@ -53,7 +55,7 @@ class Basics:  # Contains variables and other parameters used repetitively throu
         return self.NumberOfModules
 
 
-class GuessingGame:
+class GuessingGameInfo:
     Question = ["How many months are in a year? ", "How many hours are in a day?",
                 "What is the average age of retirement?", "How many hours are in a week?",
                 " What is the average life expectancy of people in this country"]
@@ -65,39 +67,6 @@ class GuessingGame:
     Answer = [12, 24, 65, 168, 81.1]
 
     AmountOfQuestions = len(Question)
-
-
-class GradeCalculator:  # Class containing all the variables for the Grade Calculator module
-    Grades = []
-    TotalScore = 0
-    WeightOfEachGrade = []
-    NumberOfAssignments = 0
-
-    # Dialogue = []
-
-    def GetGrades(self):
-        return self.Grades
-
-    def GetTotalScore(self):
-        return self.TotalScore
-
-    def GetWeightOfEachGrade(self):
-        return self.WeightOfEachGrade
-
-    def GetNumberOfAssignments(self):
-        return self.NumberOfAssignments
-
-    def SetGrades(self, Grade):
-        self.Grades.append(Grade)
-
-    def SetWeightOfEachGrade(self, Weight):
-        self.WeightOfEachGrade.append(Weight)
-
-    def SetNumberOfAssignments(self, Number):
-        self.NumberOfAssignments = Number
-
-    def SetTotalScore(self, TotalScore):
-        self.TotalScore = TotalScore
 
 
 

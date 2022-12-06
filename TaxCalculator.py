@@ -11,6 +11,23 @@ ItemTax = 0
 ItemCost = 0
 
 
+def AskUserToChooseTypeOfCalculator():
+    for Options in Dialogue.TaxCalculatorDialogue:
+        print(Options)
+    Choice = int(input("What part of this application would you like to use?: "))
+    if Choice == 1:
+        print("Proceeding to the Tax Calculator.")
+        print(Border.Border)
+        AskForTaxCalculatorData()
+    elif Choice == 2:
+        print("Opening the Bank Account Manager as we speak...")
+        print(Border.Border)
+        AskForBankAccountData()
+    else:
+        print("Not a valid option! Please try again!")
+        print(Border.Border)
+        AskUserToChooseTypeOfCalculator()
+
 def AskForBankAccountData():
     global UserBankAccountBalance
     UserBankAccountBalance = float(input("How much money would you like to deposit into your bank account?: "))
@@ -59,16 +76,13 @@ def ReturnToMainMenu():  # Return to Menu or Restart Program Function
         ReturnToMainMenu()
     if Choice == 1:
         import Menu
+        print("Returning to the Main Menu.")
         print(Border.Border)
         Menu.MainMenu()
     elif Choice == 2:
-        print("Restarting Tax Calculator Program!")
+        print("Restarting the Program.")
         print(Border.Border)
-        AskForTaxCalculatorData()
-    elif Choice == 3:
-        print("Restarting Bank Account Manager!")
-        print(Border.Border)
-        AskForBankAccountData()
+        AskUserToChooseTypeOfCalculator()
     else:
         print("Incorrect Input Detected. Please Try Again!")
         print(Border.Border)
@@ -85,4 +99,5 @@ def PrintResults(ProgramType):  # Prints the price total with tax included.
         print(Border.Border)
         ReturnToMainMenu()
 
+AskUserToChooseTypeOfCalculator()
 

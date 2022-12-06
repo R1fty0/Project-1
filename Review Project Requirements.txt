@@ -19,7 +19,7 @@ Requirements:
 		want it turned into (ex: if input is ‘2’, it could be turned into a float ‘2.0’ or a String “2”; make sure you use casting!!
 
 	
-	Task 2: 1/4 Done
+	Task 2: Done
 	
 		Create a grade calculator that reports the grade score as well as a customized message for any percentage score
 		being processed (including below 0 and above 100).

@@ -1,5 +1,7 @@
 from Data import Dialogue
-from Menu import Stats
+from Data import Basics
+
+Basics = Basics()
 DialogueClass = Dialogue()
 Metric = "data"
 
@@ -7,7 +9,8 @@ Metric = "data"
 
 
 def ConvertData(Data):
-    TypeToConvertTo = input("What data type would you like to convert your data to " f"{Stats.GetName()}?:")
+    print("Welcome to the Type Converter " f"{Basics.GetName()}")
+    TypeToConvertTo = input("What data type would you like to convert your data to " f"{Basics.GetName()}? Input the full name of the type:")
 
     # Exception Handling and Data Conversion
     if TypeToConvertTo.upper() == "FLOAT" and type(Data) != type(float):  # Converts Data to Float
@@ -23,7 +26,7 @@ def ConvertData(Data):
 
 def AskForData():
     global Metric
-    Metric = input("What is the quantity you are looking to convert " f"{Stats.GetName()}?: ")
+    Metric = input("What is the quantity you are looking to convert " f"{Basics.GetName()}?: ")
     ConvertData(Metric)
 
 
