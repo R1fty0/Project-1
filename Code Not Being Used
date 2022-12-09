@@ -32,3 +32,7 @@ class GradeCalculator:  # Class containing all the variables for the Grade Calcu
 
 
 
+       # AverageValue = int(mean(Values))
+
+
+

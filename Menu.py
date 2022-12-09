@@ -5,15 +5,9 @@ from Data import Basics
 DialogueClass = Dialogue()
 Stats = Basics()
 
+
 """
-TO-DO LIST: 
-
-2. Fix Main Menu Looping Issues
-4. Implement Guessing Game
-5. Implement Grade Calculator
-6. Implement Person Class and Small Program Surrounding It. 
-7. Double Check Requirements Before Submission. 
-
+    Functions Below, Imports and Instantiations above.
 """
 
 
@@ -21,39 +15,48 @@ def VerifyMainMenuChoice(Choice):  # Exception Handling for Main Menu Input
     while Choice == 0:
         print("Invalid entry, please try again.")
         MainMenu()
+
     if Choice == 1:  # Type Converter
         print(Dialogue.OpeningProgramStatements[0])
         print(Basics.Border)
         import Converter
         Converter.AskForData()
+
     elif Choice == 2:  # Grade Calculator
         import GradeCalculator
         print(Dialogue.OpeningProgramStatements[1])
         print(Basics.Border)
         GradeCalculator.AskForParameters()
+
     elif Choice == 3:  # Lister Program
         import Lister
         print(Dialogue.OpeningProgramStatements[2])
         print(Basics.Border)
         Lister.AskUser()
+
     elif Choice == 4:  # Guessing Game
         import Game
         print(Dialogue.OpeningProgramStatements[3])
         print(Basics.Border)
         Game.GreetUserAndPresentInstructions()
+
     elif Choice == 5:  # Tax Calculator
         import TaxCalculator
         print(Dialogue.OpeningProgramStatements[4])
         print(Basics.Border)
         TaxCalculator.AskUserToChooseTypeOfCalculator()
+
     elif Choice == 6:  # High & Low Calculator
         import LowsAndHighsCalculator
         print(Dialogue.OpeningProgramStatements[5])
         print(Basics.Border)
+        LowsAndHighsCalculator.Start()
+
     elif Choice == 7:  # Person Editor
         import PersonEditor
         print(Dialogue.OpeningProgramStatements[6])
         print(Basics.Border)
+        PersonEditor.AddPeople()
 
 
 def MainMenu():  # Main Menu
@@ -63,6 +66,7 @@ def MainMenu():  # Main Menu
         print(Text)
     # Asks the user what part of the program they would like to access?
     Choice = int(input("What program would you like to open?: "))
+    print(Basics.Border)
     VerifyMainMenuChoice(Choice)
 
 
@@ -77,5 +81,5 @@ def Hello():
     MainMenu()
 
 
-# Program Starts Here
-Hello()
+if __name__ == "__main__":  # PROGRAM STARTS HERE
+    Hello()

@@ -44,13 +44,13 @@ Requirements:
 		that reports how many of that item they can afford to buy.
 
 	
-	Task 6: Not Done
+	Task 6: Done
 
 		Create a program that allows the user to enter as many values as they want and then calculates the lowest,
 		highest, and average value using arrays or lists.
 
 
-	Task 7: 1/2 Done
+	Task 7: Done
 	
 		Create a class called ‘Person’ with the following: 
 
@@ -61,4 +61,6 @@ Requirements:
 			A constructor that requires an initial value for all variables 
 
 		Then, create a program that allows the user to initialize and edit their own person object 
-		
+
+	Known Problems:
+	    - Converter will crash if given any value that is not a number

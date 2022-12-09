@@ -1,40 +1,50 @@
+# Imports
 from Data import GuessingGameInfo
 from Data import Dialogue
 from Data import Basics
 import random
 
+# Instantiation of classes
 GuessingGame = GuessingGameInfo()
 Dialogue = Dialogue()
 
+# Variables used during the game
 CurrentResult = 1
 CurrentQuestion = 1
 CurrentHint = 1
 CurrentAnswer = 1
 
 
-def ReturnToMainMenu():  # Return to Menu or Restart Program Function
+"""
+    Imports and Variables above, functions down below.
+"""
+
+
+def ReturnToMainMenu():  # return to main menu or restart module
     Options = Dialogue.GetReturnToMainMenuDialogue()
     for Text in Options:
         print(Text)
     Choice = int(input("Input your choice: "))
 
-    while Choice > len(Options) or Choice < 0:
+    # Exception Handling for User's Choice
+    while Choice > len(Options) or Choice < 0:  # asks user to try again
         print("Please choose a valid option.")
         ReturnToMainMenu()
-    if Choice == 1:
+    if Choice == 1:  # returns user to main menu
         import Menu
         Menu.MainMenu()
-    elif Choice == 2:
+    elif Choice == 2:  # restarts module
         print("Restarting Program!")
         GenerateResult()
-    else:
+    else:  # asks user to try again
         print("Incorrect Input Detected. Please Try Again!")
         ReturnToMainMenu()
 
 
-def AskAndCheckAnswer():
-    UserAnswer = input("What is your answer?: ")
+def AskAndCheckAnswer():  # asks user what their answer is and checks it
+    UserAnswer = input("What is your answer?: ")  # asks user for answer
 
+    # checks answer
     while float(UserAnswer) != float(CurrentAnswer):
         print("Wrong Answer! Take a minute and try again!")
         print(Basics.Border)
@@ -46,12 +56,12 @@ def AskAndCheckAnswer():
         ReturnToMainMenu()
 
 
-def PrintHint():
+def PrintHint():  # prints a hint for the user
     print("Your hint is: " f"{CurrentHint}")
     AskAndCheckAnswer()
 
 
-def VerifyChoice(Choice, NumberOfOptions):
+def VerifyChoice(Choice, NumberOfOptions):  # exception handling for whether the user wants a hint or not
     while Choice > NumberOfOptions:
         print("Invalid Choice, Please Try Again!")
         print(Basics.Border)
@@ -66,7 +76,7 @@ def VerifyChoice(Choice, NumberOfOptions):
 
 
 def AskUserForHint():
-    Options = Dialogue.GuessingGameOptions
+    Options = Dialogue.GuessingGameHintPrompt
     print("Your question is: " f"{CurrentQuestion}")
     for Text in Options:
         print(Text)
@@ -74,9 +84,9 @@ def AskUserForHint():
     VerifyChoice(Choice, len(Options))
 
 
-def GenerateResult():
+def GenerateResult():  # generates a random result that is used for the question, hint and answer
     global CurrentResult
-    CurrentResult = int(random.randrange(GuessingGameInfo.AmountOfQuestions))
+    CurrentResult = int(random.randrange(GuessingGameInfo.TotalAmountOfQuestions))
 
     global CurrentQuestion
     CurrentQuestion = GuessingGameInfo.Question[CurrentResult]
@@ -90,7 +100,7 @@ def GenerateResult():
     AskUserForHint()
 
 
-def GreetUserAndPresentInstructions():
+def GreetUserAndPresentInstructions():  # what the name says
     # Prints a greeting to the user as well as the instruction of the game.
     Text = Dialogue.GetGuessingGameInstructions()
     for Length in Text:
