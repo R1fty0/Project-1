@@ -50,7 +50,7 @@ Requirements:
 		highest, and average value using arrays or lists.
 
 
-	Task 7: Not Done
+	Task 7: 1/2 Done
 	
 		Create a class called ‘Person’ with the following: 
 
