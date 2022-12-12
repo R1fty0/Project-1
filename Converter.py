@@ -33,7 +33,7 @@ def ConvertData(Data):  # Asks User for Data and the type that they would like t
 
 def AskForData():  # Asks user for number
     Metric = input("What is the numerical quantity that you are looking to convert " f"{Basics.GetName()}?: ")
-    AskForData(Metric)
+    ConvertData(Metric)
 
 
 def ReturnToMainMenu():  # Returns to the Main Menu or Restarts the Program
@@ -63,4 +63,4 @@ def PrintResults(Data, DataType):
     ReturnToMainMenu()
 
 
-AskForData()
+Hello()
